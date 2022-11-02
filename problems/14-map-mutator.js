@@ -18,8 +18,12 @@ mapMutator(arr2, function (el, i) {
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
-function mapMutator(array, cb) {
-  // Your code here
+function mapMutator(arr, cb) {
+
+  for (i=0;i<arr.length;i++) {
+    arr[i] = cb(arr[i], i)
+  }
+  return arr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
