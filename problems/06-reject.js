@@ -21,8 +21,14 @@ let hasA = function(s) {
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
 *******************************************************************************/
 
-function reject(array, cb) {
-  // Your code here
+function reject(arr, cb) {
+  let filteredArr = [];
+    arr.forEach(function(ele){
+        if(cb(ele) === false ){
+            filteredArr.push(ele);
+        }
+    })
+    return filteredArr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
