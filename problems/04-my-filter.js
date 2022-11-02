@@ -19,9 +19,20 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
 console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 
-function myFilter(array, cb) {
-    // Your code here
+function myFilter(arr, cb) {
+    let filteredArr = [];
+    arr.forEach(function(ele){
+        if(cb(ele) === true ){
+            filteredArr.push(ele);
+        }
+    })
+    return filteredArr
 }
+
+let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
+    return s.length > 3;
+});
+console.log(result2);      // ['choose', 'words', 'only']
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
