@@ -23,9 +23,19 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 console.log(result3);   // true
 *******************************************************************************/
 
-function mySome(array, cb) {
-    // Your code here
+function mySome(arr, cb) {
+    let counter =-1;
+    let bool = false;
+    arr.forEach(function(ele){
+        counter++
+        if(cb(ele, counter) === true){
+            bool = true;
+        }
+    })
+    return bool;
 }
+
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
